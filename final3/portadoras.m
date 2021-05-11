@@ -1,0 +1,10 @@
+function[y]=portadoras(x,vid,N,n)
+alfa=0.5;
+w=(1+alfa)/2;
+U=ceil(6*N*w)-1;
+por=length(x);
+Ts=1/U;
+t=Ts:Ts:por*Ts;
+fc=(2*n-1)*w;
+y=((real(x).*cos(2*pi*fc*t))-(imag(x).*sin(2*pi*fc*t)));
+end
